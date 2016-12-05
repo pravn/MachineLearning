@@ -1,0 +1,3 @@
+SET(CMAKE_VERBOSE_MAKEFILE TRUE)
+CUDA_ADD_EXECUTABLE(sampler gmm.cu sampler.cu )
+
