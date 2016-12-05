@@ -31,18 +31,18 @@ float random_number(){
 
 
 void GMM::generate_gmm_data(){
-  gaussian u = gaussian(0.7, 0.4);
+  gaussian u = gaussian(0.2, 0.1);
   std::vector<float2>::iterator it;
   size_t count = 0;
 
   for(it=data.begin(),count=0; count<size/2; it++, count++){
-    it->x = rand()/(float) RAND_MAX;
+    it->x = 0 + (0.5)*rand()/(float) RAND_MAX;
     it->y = u(it->x);
   }
 
-  gaussian v = gaussian(0.2, 0.1);
+  gaussian v = gaussian(0.8, 0.05);
   for(;it!=data.end(); it++){
-    it->x = rand()/(float) RAND_MAX;
+    it->x = 0.5+ (1-0.5)*rand()/(float) RAND_MAX;
     it->y = v(it->x);
   }
 
