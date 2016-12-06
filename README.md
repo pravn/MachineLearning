@@ -5,3 +5,5 @@ Machine Learning Experiments
    given by the Gaussian mixture formulation. To verify, we record the data in a file called "histogram.txt" with 
    which we can read the number of occurrences of a given value x. Depending on how we tune the histogramming (binning needs some work, and depends on the number of points in the input distribution and the output data spawned from it), we will get picture that may or may not match visual inspection tests.
 
+2) kmeans: Performs kmeans on 2 component gaussian. Prelude to using in GMM.
+

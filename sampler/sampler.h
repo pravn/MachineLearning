@@ -17,6 +17,7 @@ class sampler: public GMM{
   void  generate_samples();
   void print_samples();
   void write_samples();
+  void cluster_kmeans();
   
  private:
   std::vector<float> data;

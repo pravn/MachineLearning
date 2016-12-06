@@ -12,15 +12,20 @@ public:
   void print_gmm_data();
   void write_gmm_data();
   void train_gmm();
-  void cluster_kmeans();
+  //  void cluster_kmeans();
 
   std::vector<float2> get_gmm_data(){
     return data;
   }
 
+  size_t num_components;
+
 private:
   std::vector<float2> data;
   size_t size;
-  size_t num_components;
+
+  
+
+
 };
 #endif
