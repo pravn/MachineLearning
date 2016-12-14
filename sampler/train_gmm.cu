@@ -13,8 +13,8 @@ int main(){
   S.generate_samples();
   S.write_samples();
   S.write_gmm_data();
-  S.cluster_kmeans();
-//  S.train_gmm();
+  //  S.cluster_kmeans();
+  S.train_gmm();
   
 
 }

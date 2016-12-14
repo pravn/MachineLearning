@@ -104,7 +104,7 @@ void sampler::cluster_kmeans(){
   }
 
 
-  std::cout << " m " <<  mu_new[0] << " m " << mu_new[1] << " s " << sigma[0] << " s " << sigma[1] << " c " << count[0] << " c " << count[1] << std::endl;  
+  std::cout << " m " <<  mu_new[0] << " m " << mu_new[1] << " s " << sqrtf(sigma[0]) << " s " << sqrtf(sigma[1]) << " c " << count[0] << " c " << count[1] << std::endl;  
 
 
   }
@@ -186,13 +186,10 @@ void sampler::train_gmm(){
 
 
     }
-    //        std::cout << "sum" << sum_gamma[i] << std::endl;
-
   }
 
   for(int i=0; i<num_points; i++){
     for(int  j=0; j<num_components; j++){
-      //      gamma_nk[i*num_components+j]/=sum_gamma[i];
             gamma_nk[i*num_components+j]/=sum_gamma[i];
     }
   }
@@ -206,7 +203,6 @@ void sampler::train_gmm(){
   for(int i=0; i<num_points; i++){
     for(int j=0; j<num_components; j++){
       N_k[j] += gamma_nk[i*num_components+j];
-      //      std::cout << N_k[j] << std::endl;
     }
   }
 

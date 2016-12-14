@@ -27,7 +27,6 @@ void sampler::generate_samples(){
 
 }
 
-
 void sampler::print_samples(){
   for(int i=0; i<data.size(); i++){
     std::cout << data[i] << std::endl;
@@ -51,5 +50,4 @@ void sampler::write_samples(){
 
 }
     
-
 
