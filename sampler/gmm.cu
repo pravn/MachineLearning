@@ -8,27 +8,7 @@
 #include <fstream>
 #include <iomanip>
 #include "gmm.h"
-
-//make const
-inline float pi() { return std::atan(1)*4.0;}
-
-struct gaussian{
-  gaussian(float _mu, float _sigma): mu(_mu), sigma(_sigma){};
-
-  float operator()(float y){
-    return 1.0/sqrtf(2.0f*pi()*sigma*sigma)*exp(-(y-mu)*(y-mu)/(2*sigma*sigma));
-   }
-
-  float mu;
-  float sigma;
-};
-
-
-float random_number(){
-  float u = rand();
-  return u/(float) RAND_MAX;
-};
-
+#include "utils.h"
 
 void GMM::generate_gmm_data(){
   gaussian u = gaussian(0.2, 0.1);

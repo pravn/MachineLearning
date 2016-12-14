@@ -7,9 +7,7 @@
 
 void sampler::generate_samples(){
   generate_gmm_data();
-
   std::vector<float2> gmm_data = get_gmm_data();
-
   size_t c=0;
 
 

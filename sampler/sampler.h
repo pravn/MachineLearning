@@ -14,15 +14,21 @@ class sampler: public GMM{
     histogram.resize(gmm_points*gmm_components);
   }
     
-  void  generate_samples();
+  void generate_samples();
   void print_samples();
   void write_samples();
   void cluster_kmeans();
+  void train_gmm();
+
+
+
   
  private:
   std::vector<float> data;
   std::vector<float2> histogram;
   size_t num_points;
+  
+
 };
   
 #endif //SAMPLER_H
